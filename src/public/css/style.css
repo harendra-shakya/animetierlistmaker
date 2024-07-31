@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+:root {
+    --Banner: #313131;
+    --SS: rgb(146, 184, 199);
+    --S: #6e44ff;
+    --A: #b892ff;
+    --B: #ffc2e2;
+    --C: #ff90b3;
+    --D: #ef7a85;
+    --F: #e85f5c;
+    --imgH: 130px;
+    --imgW: 100px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    font-family: "Nunito", Roboto, sans-serif;
+}
+
+* {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    position: relative;
+    background: var(--Banner);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    max-height: 130px;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+header i {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+header i:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+header a {
+    font-size: 2em;
+}
+
+#header-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75px;
+    height: auto;
+    transition: all 0.3s;
+}
+
+#header-img:hover {
+    opacity: 0.6;
+}
+
+.anime {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#background {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: none;
+    background-size: cover;
+}
+
+body {
+    color: white;
+}
+
+header h2 {
+    font-size: 3.5rem;
+}
+
+.thumbnail-container {
+    position: relative;
+    display: inline-block;
+    width: var(--imgW);
+    height: var(--imgH);
+    margin: 0px 1px;
+}
+
+.thumbnail {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+}
+
+.title-display {
+    font-family: "Nunito", Roboto, sans-serif;
+    font-size: 0.8rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    color: transparent;
+}
+
+.title-display:hover {
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+}
+
+.tier {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-column-gap: 0em;
+}
+
+.tier-rank {
+    position: relative;
+    min-height: var(--imgH);
+}
+
+.anime {
+    min-height: var(--imgH);
+}
+
+#SS-Rank {
+    background: var(--SS);
+}
+
+#S-Rank {
+    background: var(--S);
+}
+
+#A-Rank {
+    background: var(--A);
+}
+
+#B-Rank {
+    background: var(--B);
+}
+
+#C-Rank {
+    background: var(--C);
+}
+
+#D-Rank {
+    background: var(--D);
+}
+
+#F-Rank {
+    background: var(--F);
+}
+
+.rank {
+    font-size: 3.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 800px) {
+    .anime {
+        display: block;
+    }
+    .tier {
+        display: block;
+    }
+    .tier-rank {
+        min-height: 50px;
+    }
+
+    header {
+        min-height: 70px;
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+    .rank {
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    #header-img {
+        position: absolute;
+        visibility: flex;
+    }
+    .thumbnail-container {
+        width: 18%;
+        height: 112px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .rank {
+        font-size: 2rem;
+    }
+}
